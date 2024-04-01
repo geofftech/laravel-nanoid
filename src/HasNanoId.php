@@ -4,13 +4,13 @@ namespace GeoffTech\LaravelNanoId;
 
 use Hidehalo\Nanoid\Client;
 
-trait HasNanoids
+trait HasNanoId
 {
-  protected static function bootHasNanoids(): void
+  protected static function bootHasNanoId(): void
   {
     static::creating(function (self $model) {
       if (!$model->{$model->getKeyName()}) {
-        $model->{$model->getKeyName()} = $model->generateNanoid();
+        $model->{$model->getKeyName()} = $model->generateNanoId();
       }
     });
   }
@@ -18,7 +18,7 @@ trait HasNanoids
   /**
    * Generate a nanoid.
    */
-  protected function generateNanoid(): string
+  protected function generateNanoId(): string
   {
     return $this->getNanoIdPrefix() . $this->newNanoId();
   }
@@ -28,10 +28,10 @@ trait HasNanoids
     $client = new Client;
 
     if ($alphabet = $this->getNanoIdAlphabet()) {
-      return $client->formattedId($alphabet, $this->getNanoidLength());
+      return $client->formattedId($alphabet, $this->getNanoIdLength());
     }
 
-    return $client->generateId($this->getNanoidLength(), Client::MODE_DYNAMIC);
+    return $client->generateId($this->getNanoIdLength(), Client::MODE_DYNAMIC);
   }
 
   protected function getNanoIdPrefix(): string
@@ -50,7 +50,7 @@ trait HasNanoids
   /**
    * Get the nanoid length.
    */
-  protected function getNanoidLength(): ?int
+  protected function getNanoIdLength(): ?int
   {
     $nanoIdLength = null;
 

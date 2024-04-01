@@ -1,0 +1,20 @@
+{
+  "name": "geofftech/laravel-nanoid",
+  "description": "Nano ID for Laravel models",
+  "type": "library",
+  "require": {
+    "hidehalo/nanoid-php": "^1.1"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "GeoffTech\\LaravelNanoId\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Geoff",
+      "email": "geoff@geofftech.com"
+    }
+  ]
+}

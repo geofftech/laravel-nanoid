@@ -79,7 +79,9 @@ trait HasNanoId
       return $this->nanoidAlphabet();
     }
 
-    return null;
+    // don't use '-' or '_' - just clean characters
+    return '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // return null;
   }
 
   /**

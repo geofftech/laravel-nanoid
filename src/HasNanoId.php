@@ -18,7 +18,7 @@ trait HasNanoId
   /**
    * Generate a nanoid.
    */
-  protected function generateNanoId(): string
+  public function generateNanoId(): string
   {
     return $this->getNanoIdPrefix() . $this->newNanoId();
   }

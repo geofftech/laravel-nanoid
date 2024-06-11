@@ -9,10 +9,15 @@ trait HasNanoId
   protected static function bootHasNanoId(): void
   {
     static::creating(function (self $model) {
-      if (!$model->{$model->getKeyName()}) {
-        $model->{$model->getKeyName()} = $model->generateNanoId();
-      }
+      $model->checkKey();
     });
+  }
+
+  public function checkKey(): void
+  {
+    if (!$this->{$this->getKeyName()}) {
+      $this->{$this->getKeyName()} = $this->generateNanoId();
+    }
   }
 
   /**

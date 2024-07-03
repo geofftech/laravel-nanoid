@@ -9,7 +9,10 @@
   "autoload": {
     "psr-4": {
       "GeoffTech\\LaravelNanoId\\": "src/"
-    }
+    },
+    "files": [
+      "src/helpers.php"
+    ]
   },
   "authors": [
     {

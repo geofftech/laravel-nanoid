@@ -3,7 +3,8 @@
   "description": "Nano ID for Laravel models",
   "type": "library",
   "require": {
-    "hidehalo/nanoid-php": "^1.1"
+    "hidehalo/nanoid-php": "^1.1",
+    "laravel/pint": "^1.18"
   },
   "license": "MIT",
   "autoload": {

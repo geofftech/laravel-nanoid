@@ -2,11 +2,13 @@
   "name": "geofftech/laravel-nanoid",
   "description": "Nano ID for Laravel models",
   "type": "library",
-  "require": {
-    "hidehalo/nanoid-php": "^1.1",
-    "laravel/pint": "^1.18"
-  },
   "license": "MIT",
+  "require": {
+    "hidehalo/nanoid-php": "^2.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.21"
+  },
   "autoload": {
     "psr-4": {
       "GeoffTech\\LaravelNanoId\\": "src/"

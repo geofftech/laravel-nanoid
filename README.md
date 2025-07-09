@@ -1,6 +1,8 @@
 # GeoffTech Laravel NanoID
 
-Initial code from https://github.com/yondifon/laravel-nanoid
+Use `NanoID` for primary keys on Models
+
+- Initial code from https://github.com/yondifon/laravel-nanoid
 
 ## Usage
 
